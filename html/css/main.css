@@ -87,6 +87,72 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+:root {
+  /* Add global variables */
+  --test-color: blue;
+}
+
+body {
+
+}
+
+body.home_page_grid {
+  display: grid;
+  grid-template-areas:
+  ".         header   ."
+  "leftside  content  rightside"
+  "leftside  content  rightside"
+  ".         footer   .";
+
+  grid-template-columns: 1fr 3fr 1fr;
+}
+
+header {
+    grid-column-start: header-start;
+    grid-column-end: header-end;
+    grid-row-start: header-start;
+    grid-row-end: header-end;
+}
+
+header h1 {
+    width: max-content;
+    text-decoration-line: underline;
+}
+
+header nav {
+    display: None;
+}
+
+article {
+    grid-column-start: content-start;
+    grid-column-end: content-end;
+    grid-row-start: content-start;
+    grid-row-end: content-end;
+}
+
+article p {
+    text-indent: 2rem;
+}
+
+article p.closing_line {
+    text-align: center;
+    text-indent: unset;
+}
+
+footer {
+    grid-column-start: footer-start;
+    grid-column-end: footer-end;
+    grid-row-start: footer-start;
+    grid-row-end: footer-end;
+}
+
+footer nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
