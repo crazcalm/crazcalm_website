@@ -115,7 +115,7 @@ header {
 }
 
 header h1 {
-    width: max-content;
+    text-align: center;
     text-decoration-line: underline;
 }
 
@@ -132,6 +132,8 @@ article {
 
 article p {
     text-indent: 2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
 
 article p.closing_line {
@@ -144,15 +146,18 @@ footer {
     grid-column-end: footer-end;
     grid-row-start: footer-start;
     grid-row-end: footer-end;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 footer nav {
     display: flex;
     justify-content: space-around;
+    gap: 1rem;
 }
 
 .social-media-icon {
-    width: 64px;
+    width: 34px;
 }
 
 
