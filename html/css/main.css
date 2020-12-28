@@ -150,6 +150,54 @@ article p.closing_line {
     text-indent: unset;
 }
 
+@media (max-device-width: 700px) {
+    table {
+        display: None;
+    }
+}
+
+
+.table-divider-bottom {
+    border-bottom-width: 0.5rem;
+}
+
+.table-divider-top {
+    border-top-width: 0.5rem;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table thead {
+    border-bottom-style: groove;
+}
+
+
+table th {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+table thead tr th {
+    border-bottom-style: groove;
+    border-right-style: groove;
+}
+
+table .social-media-header {
+    border-right-style: groove;
+    font-size: 1.3rem;
+}
+
+table tbody tr th {
+    border-bottom-style: groove;
+}
+
+table tbody tr td {
+    border-style: groove;
+}
+
 footer {
     grid-column-start: footer-start;
     grid-column-end: footer-end;
