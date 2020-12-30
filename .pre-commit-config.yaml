@@ -12,7 +12,7 @@ repos:
     -   id: detect-missing-css-classes
         args:
         - --css-files-dir
-        - html/css
+        - html/static/css
         - --html-files-dir
         - html/
     -   id: html-tags-blacklist
@@ -22,3 +22,9 @@ repos:
     hooks:
     -   id: validate-html
         args: ["--ignore=has no cells beginning in it"]
+-   repo: https://github.com/doublify/pre-commit-rust
+    rev: master
+    hooks:
+    -   id: fmt
+    -   id: cargo-check
+    -   id: clippy

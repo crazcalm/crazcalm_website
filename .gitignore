@@ -12,3 +12,8 @@ Cargo.lock
 # Personal
 ## Ghostwriter
 *.backup
+
+
+# Added by cargo
+
+/target
