@@ -140,14 +140,22 @@ article {
 }
 
 article p {
-    text-indent: 2rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
 
-article p.closing_line {
+.indent-text {
+    text-indent: 2rem;
+}
+
+.center-text {
     text-align: center;
-    text-indent: unset;
+}
+
+article p.closing_line {
+    font-size: 1.3em;
+    font-weight: 700;
+    font-style: italic;
 }
 
 @media (max-device-width: 700px) {
@@ -168,6 +176,9 @@ article p.closing_line {
 table {
     border-collapse: collapse;
     text-align: center;
+    font-size: 0.8em;
+    margin-left:auto;
+    margin-right: auto;
 }
 
 table thead {
