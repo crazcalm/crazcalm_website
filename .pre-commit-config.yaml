@@ -28,3 +28,7 @@ repos:
     -   id: fmt
     -   id: cargo-check
     -   id: clippy
+-   repo: https://github.com/pryorda/dockerfilelint-precommit-hooks
+    rev: v0.1.0
+    hooks:
+    -   id: dockerfilelint
