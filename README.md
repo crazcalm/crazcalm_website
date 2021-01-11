@@ -19,3 +19,10 @@
 
 #### Install:
 `pre-commit install`
+
+
+### Running the app
+- `cargo run` and then check http://localhost:3030/
+
+#### Run with logging
+- `RUST_LOG=trace cargo run`
