@@ -2,7 +2,7 @@ use warp::Filter;
 
 #[tokio::main]
 async fn main() {
-    pretty_env_logger::init();
+    json_env_logger::init();
 
     // Serves directory for static items
     let static_items = warp::path("static").and(warp::fs::dir("html/static"));
