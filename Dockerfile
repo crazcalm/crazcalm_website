@@ -1,11 +1,12 @@
-FROM rust:1.49
+FROM rust:1.59-slim-buster
 
 WORKDIR /usr/src/crazcalm_website
 
-COPY . .
-
-RUN cargo install --path .
+COPY ./target/release/crazcalm_website .
+COPY ./html ./html
 
 ENV RUST_LOG=trace
 
-CMD ["crazcalm_website"]
+EXPOSE 3030
+
+CMD ["./crazcalm_website"]

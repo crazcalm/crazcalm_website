@@ -2,7 +2,8 @@ use warp::Filter;
 
 #[tokio::main]
 async fn main() {
-    json_env_logger::init();
+    // Initilize the logger
+    env_logger::init();
 
     // Serves directory for static items
     let static_items = warp::path("static").and(warp::fs::dir("html/static"));
@@ -15,5 +16,5 @@ async fn main() {
     // Setting up my routes
     let routes = main_page.or(static_items);
 
-    warp::serve(routes).run(([127, 0, 0, 1], 3030)).await;
+    warp::serve(routes).run(([0, 0, 0, 0], 3030)).await;
 }
