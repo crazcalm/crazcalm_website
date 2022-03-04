@@ -16,5 +16,5 @@ async fn main() {
     // Setting up my routes
     let routes = main_page.or(static_items);
 
-    warp::serve(routes).run(([0, 0, 0, 0], 3030)).await;
+    warp::serve(routes).run(([0, 0, 0, 0], 8080)).await;
 }
