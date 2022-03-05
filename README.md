@@ -29,7 +29,11 @@
 
 ### Running app in Container
 #### Create an image of the app
-- `podman build -t website .`
+Build the release binary and then put that binary in a container.
+```
+cargo build --release
+podman build -t website .
+```
 
 The above command assumes that you are at the root directory for this project. The `-t website` tags the build with the name website.
 
@@ -42,9 +46,9 @@ You should see and entry for `localhost/website`.
 - podman image rm website
 
 #### Create/run the container
-- `podman run -it --rm --name website -p 8080:3030 localhost/website`
+- `podman run -it --rm --name website -p 8081:8080 localhost/website`
 
-The above command runs a container, names the container `website`, exposes the container's 3030 port to the host machine's 8080 port, and `--rm` will destroy the container after it has been stopped.
+The above command runs a container, names the container `website`, exposes the container's 8080 port to the host machine's 8081 port, and `--rm` will destroy the container after it has been stopped.
 
 **Note**: The logs are being printed to screen. If you want to keep them, then pipe/tee them someplace else.
 

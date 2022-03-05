@@ -7,6 +7,6 @@ COPY ./html ./html
 
 ENV RUST_LOG=trace
 
-EXPOSE 3030
+EXPOSE 8080
 
 CMD ["./crazcalm_website"]
