@@ -1,12 +1,11 @@
-FROM rust:1.59-slim-buster
+FROM rust:slim-buster
 
 WORKDIR /usr/src/crazcalm_website
 
-COPY ./target/release/crazcalm_website .
-COPY ./html ./html
+COPY . .
 
 ENV RUST_LOG=trace
 
 EXPOSE 8080
 
-CMD ["./crazcalm_website"]
+CMD ["cargo", "run"]

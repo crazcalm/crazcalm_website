@@ -31,8 +31,7 @@
 #### Create an image of the app
 Build the release binary and then put that binary in a container.
 ```
-cargo build --release
-podman build -t website .
+podman build -t website . --ignorefile dockerignore
 ```
 
 The above command assumes that you are at the root directory for this project. The `-t website` tags the build with the name website.
