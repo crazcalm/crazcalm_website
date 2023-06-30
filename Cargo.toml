@@ -8,6 +8,6 @@ edition = "2021"
 
 [dependencies]
 tokio = { version = "1", features = ["full"]}
-warp = {git = "https://github.com/seanmonstar/warp.git", rev="4e9c4fd6ce238197fd1088061bbc07fa2852cb0f"}
+warp = "0.3"
 log = "0.4"
 env_logger = "0.9.0"
